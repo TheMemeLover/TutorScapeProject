@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.navbar {
+  color: white;
+  height: 100px;
+  background: black;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 100;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  font-weight: 400;
+}
+.navbarLinks {
+  display: flex;
+  gap: 20px;
+  padding-right: 70px;
+  align-items: center;
+}
+.findTutors {
+  border: 2px solid gold;
+  padding: 10px;
+  margin-left: 30px;
+  transition: .2s;
+  font-size: 20px;
+  font-weight: 500;
+}
+.findTutors:hover, .homeBannerButton:hover {
+  background: gold;
+  color: black;
+  transition: .2s;
+}
+.homeBanner {
+  /* Set the linear gradient as the first layer */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../pics/homeBackground.jpg');
+  height: 100svh;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeBannerElements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  color: white;
+}
+.homeBannerTitle {
+  font-size: 80px;
+  font-weight: 400;
+}
+.homeBannerTagline {
+  font-weight: 400;
+}
+.homeBannerButton {
+  margin-top: 30px;
+  font-size: 30px;
+  border: 2px solid gold;
+  padding: 10px;
+  font-weight: 500;
+  transition: .2s;
+}
+footer {
+  text-align: center;
+  background: black;
+  color: white;
+}
+.findPeerTutors {
+  color: black;
+}
+.Tutor {
+  padding-left: 100px;
+  padding-top: 150px;
+  min-height: 100svh;
+  background: #F5F5F5;
+  background-attachment: fixed;
+}
+.pfp {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  border: 5px solid #f0ebeb;
+  margin-top: -90px;
+}
+.tutor {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  justify-content: space-between;
+  background: white;
+  border-radius: 10px;
+  color: black;
+}
+.bioPreview {
+  text-align: center;
+}
+.tutorName {
+  color: black;
+  font-weight: 400;
+}
+.tutorsArrayWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 60px;
+}
+.readMore {
+  font-weight: bold;
+}
+.trade {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+.teach {
+  background: #64b964;
+  padding: 5px;
+}
+.learn {
+  background: lightblue;
+  padding: 5px;
+}
+.test {
+  padding-top: 200px;
+}
+.TutorDetailsWrapper {
+  min-height: 100svh;
+  padding-top: 100px;
+  background: #F5F5F5;
+  padding-bottom: 40px;
+  display: flex;
+}
+.tutorDetailsPfp {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.tutorDetailsMain, .tutorDetailsBio, .tutorDetailsReview {
+  margin: 70px 0 0 70px;
+  width: 1000px;
+  border-radius: 15px;
+  background: white;
+  padding: 30px;
+}
+.tutorDetailsMainTop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.infoWrapper > h1 {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.infoWrapper > h2 {
+  font-size: 20px;
+}
+.profileRating {
+  padding-bottom: 20px;
+}
+.tutorDetailsMainBackground {
+  padding-top: 20px;
+}
+.tutorDetailsMainBackground > div > p {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+.tutorDetailsMainBackground > div {
+  display: flex;
+}
+.tutorDetailsBio, .tutorDetailsReview {
+  margin-top: 20px !important;
+}
+.tutorDetailsBio > h3, .tutorDetailsReview > h3 {
+  padding-bottom: 10px;
+}
+.tutorDetailsBio > p {
+  padding-left: 15px;
+}
+.tutorDetailsReview > .reviewSummary {
+  padding-left: 15px;
+}
+.tutorDetailsReview > .reviewSummary > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bar {
+  height: 5px;
+  width: 100px;
+  border-radius: 5px;
+}
+.empty {
+  background: grey;
+}
+.full {
+  background: gold;
+}
+.reviewer {
+  padding-top: 20px;
+  padding-left: 10px;
+  display: flex;
+}
+hr {
+  border-top: grey;
+  margin-top: 20px;
+}
+.reviewer > h4 {
+  padding-right: 200px;
+  padding-top: 30px;
+}
+.description {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.date {
+  font-size: 15px;
+  color: #4d4d4d;
+}
+.stars {
+  font-size: 23px;
+}
+.message {
+  margin-left: 20px;
+  margin-top: 70px;
+}
+.messageTop {
+  background: navy;
+  width: 350px;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: white;
+  font-weight: bold;
+}
+.messageContent {
+  height: 400px;
+  background: #ffffff;
+  padding-top: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+}
+.messageInput {
+  height: 50px;
+  width: 80%;
+  background: white;
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+.inputWrapper > button {
+  height: 50px;
+  margin: 0;
+  display: block;
+  width: 20%;
+  background: navy;
+  border: none;
+  cursor: pointer;
+}
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+.textBubble {
+  margin-bottom: 5px;
+  padding: 5px;
+  background: #5252ff;
+  color: white;
+  border-radius: 5px;
+}
+.Update {
+  padding-top: 130px;
+  padding-bottom: 30px;
+  background-color: #CADCFC;
+  display: flex;
+  justify-content: center;
+  min-height: 100svh;
+}
+.form {
+  background: white;
+  width: 38em;
+  border-radius: 5px;
+  color: #00246B;
+  padding: 35px;
+}
+.updateInput {
+  border-radius: 3px;
+  background: #f9f9f9;
+  line-height: 1.4;
+  height: 45px;
+  border: 1px solid #e5e5e5;
+  padding: 1em;
+  color: black;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: .2s;
+}
+.updateInput:focus, .bioArea:focus {
+  outline: 2px solid #2760d3;
+  transform: scale(1.05);
+  transition: .2s;
+}
+.Big {
+  width: 100%;
+}
+.Small {
+  width: 33%;
+}
+.Medium {
+  width: 50%;
+}
+.updateTitle {
+  padding-bottom: 15px;
+}
+.bioArea {
+  padding: 1em;
+  width: 100%;
+  min-height: 200px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  background: #f9f9f9;
+  color: black;
+  transition: .2s;
+  margin-top: 10px;
+}
+.saveButton {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  background: #8AB6F9;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.topWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topWrapper > div {
+  display: flex;
+  gap: 5px;
+  color: #00246B;
+}
+#public {
+  cursor: pointer;
+}
+.publicStatus {
+  font-size: 13px;
+  color: blue;
+}
+.clipboard {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid black;
+  margin-bottom: 30px;
+}
+.lockScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.profileWrapper {
+  justify-content: center;
+}
+.tutorHeading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.filters {
+  padding: 10px 15px 10px 15px;
+  font-weight: 400;
+  font-size: 15px;
+  border: 2px solid #878787;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+}
+.filterBar {
+  margin: 50px 20px 100px 315px;
+  background: white;
+  width: 50%;
+  height: 170px;
+  border-radius: 25px;
+  display: flex;
+  padding: 20px;
+  position: relative;
+}
+.filterOptionsWrapper {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.filterButton {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  background: white;
+  border: 1.5px solid rgba(231,231,233,0.9);
+  border-radius: 10px;
+  padding-left: 13px;
+  font-size: 15px;
+  width: 200px;
+}
+.stars {
+  cursor: pointer;
+}
+.reset {
+  background: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+.AI {
+  margin: 50px 20px 100px 115px;
+  background: white;
+  width: 460px;
+  height: 500px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(231,231,233,0.9);
+  padding: 20px;
+}
+.AIWrapper {
+  display: flex;
+}
+.AIHeading {
+  margin-bottom: 20px;
+}
+.AITextArea {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
+}
+.AIFilter {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 30px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.AIFilter:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.submitAI {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #2f80ed;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submitAI:hover {
+  background-color: #1366d6;
+  box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.submitAI:hover:after {
+  opacity: .5;
+}
+.AIOutput > a {
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}
